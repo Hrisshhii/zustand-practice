@@ -1,7 +1,7 @@
 import { useCounter } from "./store"
 
 function App() {
-  const {count,increment,decrement}=useCounter(state=>state);
+  const {count,increment,decrement}=useCounter();
   //const count=useCounter(state=>state.count);
 
   return (
