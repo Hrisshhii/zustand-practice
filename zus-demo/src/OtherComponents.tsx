@@ -1,8 +1,8 @@
 import { useCounter } from "./store"
 
 const OtherComponents = () => {
-  const increment=useCounter(state=>state.increment);
-  const decrement=useCounter(state=>state.decrement);
+  const {increment}=useCounter();
+  const {decrement}=useCounter();
 
   return (
     <div className="flex gap-4 justify-center">
