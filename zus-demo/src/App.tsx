@@ -1,7 +1,7 @@
 import OtherComponents from "./OtherComponents";
 import { useCounter } from "./store"
 
-function App() {
+function App(){
   const {count}=useCounter();
   //const count=useCounter(state=>state.count);
   return (
