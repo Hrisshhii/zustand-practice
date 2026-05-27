@@ -9,7 +9,6 @@ const OtherComponents=()=>{
       <button onClick={decrement} className="px-5 py-2 rounded-xl bg-red-500 text-white" >
         {`-`}
       </button>
-
       <button onClick={increment} className="px-5 py-2 rounded-xl bg-green-500 text-white" >
         {`+`}
       </button>
