@@ -22,3 +22,5 @@ const useStore=create<RecipeStore>((set)=>({
         recipes:state.recipes.filter((recipe)=>recipe.id!==id)
     })),
 }))
+
+export default useStore;
