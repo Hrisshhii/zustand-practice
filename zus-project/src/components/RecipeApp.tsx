@@ -34,6 +34,26 @@ const RecipeApp=()=>{
           <textarea value={instructions} onChange={e=>setInstructions(e.target.value)} placeholder="Recipe Name" 
             className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
+
+          <div className="flex justify-between">
+            {editing?(
+              <>
+                <button onClick={handleUpdateRecipe} className="bg-yellow-500 text-white-rounded-lg px-4 py-2 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                  Update Recipe
+                </button>
+
+                <button onClick={handleCancelEdit} className="bg-gray-500 text-white rounded-lg px-4 py-2 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                  Cancel
+                </button>
+              </>
+            ):(
+              <>
+                <button onClick={handleAddRecipe} className="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                  Add Recipe
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
       </div>
