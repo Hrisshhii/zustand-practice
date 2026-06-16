@@ -19,8 +19,23 @@ const RecipeApp=()=>{
     <div className="min-h-screen flex items-center justify-center bg-green-100">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
         <h1 className="text-3xl font-bold mb-6 text-center text-green-800">
-          Recipe
+          Recipe Book
         </h1>
+
+        <div className="space-y-4 mb-6">
+          <input type="text" value={name} onChange={e=>setName(e.target.value)} placeholder="Recipe Name" 
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+
+          <input type="text" value={ingredients} onChange={e=>setIngredients(e.target.value)} placeholder="Recipe Name" 
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+
+          <textarea value={instructions} onChange={e=>setInstructions(e.target.value)} placeholder="Recipe Name" 
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+        </div>
+
       </div>
     </div>
   )
