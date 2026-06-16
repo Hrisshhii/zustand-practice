@@ -16,7 +16,13 @@ const RecipeApp=()=>{
   const [editing,setEditing]=useState<Recipe | null>(null);
 
   return (
-    <div className=""></div>
+    <div className="min-h-screen flex items-center justify-center bg-green-100">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
+        <h1 className="text-3xl font-bold mb-6 text-center text-green-800">
+          Recipe
+        </h1>
+      </div>
+    </div>
   )
 }
 
