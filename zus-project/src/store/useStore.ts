@@ -24,9 +24,7 @@ const useStore = create<RecipeStore>((set) => ({
 
   removeRecipe: (id) =>
     set((state) => ({
-      recipes: state.recipes.filter(
-        (recipe) => recipe.id !== id
-      ),
+      recipes: state.recipes.filter((recipe) => recipe.id !== id),
     })),
 
   updateRecipe: (updatedRecipe) =>
