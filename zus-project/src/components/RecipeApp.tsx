@@ -2,47 +2,38 @@ import { useState } from "react";
 import useStore, { type Recipe } from "../store/useStore";
 
 const RecipeApp = () => {
-  const {
-    recipes,
-    addRecipe,
-    removeRecipe,
-    updateRecipe,
-  } = useStore();
+  const {recipes,addRecipe,removeRecipe,updateRecipe}=useStore();
 
-  const [name, setName] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [instructions, setInstructions] = useState("");
-  const [editing, setEditing] = useState<Recipe | null>(null);
+  const [name,setName]=useState("");
+  const [ingredients,setIngredients]=useState("");
+  const [instructions,setInstructions]=useState("");
+  const [editing,setEditing]=useState<Recipe | null>(null);
 
-  const clearForm = () => {
+  const clearForm=()=>{
     setName("");
     setIngredients("");
     setInstructions("");
     setEditing(null);
   };
 
-  const handleAddRecipe = () => {
+  const handleAddRecipe=() => {
     if (
       name.trim() !== "" &&
       ingredients.trim() !== "" &&
       instructions.trim() !== ""
-    ) {
+    ){
       addRecipe({
         id: Date.now(),
         name,
-        ingredients: ingredients
-          .split(",")
-          .map((item) => item.trim()),
-        instructions: instructions
-          .split("\n")
-          .map((item) => item.trim()),
+        ingredients: ingredients.split(",").map((item) => item.trim()),
+        instructions: instructions.split("\n").map((item) => item.trim()),
       });
 
       clearForm();
     }
   };
 
-  const handleEditRecipe = (recipe: Recipe) => {
+  const handleEditRecipe=(recipe: Recipe) => {
     setEditing(recipe);
 
     setName(recipe.name);
@@ -50,24 +41,20 @@ const RecipeApp = () => {
     setInstructions(recipe.instructions.join("\n"));
   };
 
-  const handleUpdateRecipe = () => {
+  const handleUpdateRecipe=()=>{
     if (!editing) return;
 
     updateRecipe({
       id: editing.id,
       name,
-      ingredients: ingredients
-        .split(",")
-        .map((item) => item.trim()),
-      instructions: instructions
-        .split("\n")
-        .map((item) => item.trim()),
+      ingredients: ingredients.split(",").map((item) => item.trim()),
+      instructions: instructions.split("\n").map((item) => item.trim()),
     });
 
     clearForm();
   };
 
-  const handleCancelEdit = () => {
+  const handleCancelEdit=()=>{
     clearForm();
   };
 
@@ -79,26 +66,18 @@ const RecipeApp = () => {
         </h1>
 
         <div className="space-y-4 mb-6">
-          <input
-            type="text"
-            value={name}
+          <input type="text" value={name} placeholder="Recipe Name"
             onChange={(e) => setName(e.target.value)}
-            placeholder="Recipe Name"
             className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
-          <input
-            type="text"
-            value={ingredients}
+          <input type="text" value={ingredients} placeholder="Ingredients (comma separated)"
             onChange={(e) => setIngredients(e.target.value)}
-            placeholder="Ingredients (comma separated)"
             className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
-          <textarea
-            value={instructions}
+          <textarea value={instructions} placeholder="Instructions (one step per line)"
             onChange={(e) => setInstructions(e.target.value)}
-            placeholder="Instructions (one step per line)"
             rows={4}
             className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
@@ -106,23 +85,20 @@ const RecipeApp = () => {
           <div className="flex gap-3">
             {editing ? (
               <>
-                <button
-                  onClick={handleUpdateRecipe}
+                <button onClick={handleUpdateRecipe}
                   className="bg-yellow-500 text-white rounded-lg px-4 py-2 hover:bg-yellow-600"
                 >
                   Update Recipe
                 </button>
 
-                <button
-                  onClick={handleCancelEdit}
+                <button onClick={handleCancelEdit}
                   className="bg-gray-500 text-white rounded-lg px-4 py-2 hover:bg-gray-600"
                 >
                   Cancel
                 </button>
               </>
             ) : (
-              <button
-                onClick={handleAddRecipe}
+              <button onClick={handleAddRecipe}
                 className="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600"
               >
                 Add Recipe
@@ -133,10 +109,7 @@ const RecipeApp = () => {
 
         <ul className="space-y-4">
           {recipes.map((recipe) => (
-            <li
-              key={recipe.id}
-              className="p-4 bg-green-50 rounded-lg shadow-sm"
-            >
+            <li key={recipe.id} className="p-4 bg-green-50 rounded-lg shadow-sm">
               <h2 className="text-xl font-semibold text-green-800 mb-2">
                 {recipe.name}
               </h2>
@@ -156,15 +129,13 @@ const RecipeApp = () => {
               </div>
 
               <div className="flex gap-3">
-                <button
-                  onClick={() => handleEditRecipe(recipe)}
+                <button onClick={() => handleEditRecipe(recipe)}
                   className="bg-yellow-500 text-white rounded-lg px-4 py-2 hover:bg-yellow-600"
                 >
                   Edit
                 </button>
 
-                <button
-                  onClick={() => removeRecipe(recipe.id)}
+                <button onClick={() => removeRecipe(recipe.id)}
                   className="bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600"
                 >
                   Delete
