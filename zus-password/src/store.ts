@@ -15,6 +15,6 @@ type PasswordState={
   generatePassword:()=>void;
 }
 
-const usePasswordStore=create((set)=>({
+const usePasswordStore=create<PasswordState>((set)=>({
 
 }))
