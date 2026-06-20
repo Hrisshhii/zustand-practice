@@ -59,6 +59,15 @@ const ExpenseTracker=()=>{
           ))}
         </ul>
 
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold text-purple-700">
+            Total Expense: {" "}
+            <span className="text-purple-600">
+              $ {expenses.reduce((total,expense)=>total+expense.amount,0).toFixed(2)}
+            </span>
+          </h2>
+        </div>
+
       </div>
     </div>
   )
