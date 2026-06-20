@@ -50,3 +50,5 @@ const usePasswordStore=create<PasswordState>((set)=>({
     return {generatedPassword:password};
   })
 }))
+
+export default usePasswordStore;
