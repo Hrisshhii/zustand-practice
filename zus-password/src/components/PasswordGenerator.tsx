@@ -1,7 +1,6 @@
 import usePasswordStore from "../store";
 
-
-const PasswordGenerator = () => {
+const PasswordGenerator=()=>{
   const {generatedPassword}=usePasswordStore()
 
   return (
