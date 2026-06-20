@@ -42,5 +42,11 @@ const usePasswordStore=create<PasswordState>((set)=>({
 
     if(!chars) return {generatedPassword:""}
 
+    let password="";
+    for(let i=0;i<state.length;i++){
+      const randomIndex=Math.floor(Math.random()*chars.length);
+      password+=chars[randomIndex];
+    }
+    return {generatedPassword:password};
   })
 }))
