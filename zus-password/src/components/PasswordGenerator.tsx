@@ -35,7 +35,7 @@ const PasswordGenerator=()=>{
           </button>
           {generatedPassword && (
             <div className="mt-4 p-4 bg-gray-100 rounded-lg">
-              <p></p>
+              <p className="text-lg break-all">{generatedPassword}</p>
             </div>
           )}
         </div>
