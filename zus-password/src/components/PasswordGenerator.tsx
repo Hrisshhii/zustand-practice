@@ -1,9 +1,11 @@
 import usePasswordStore from "../store";
 
 const PasswordGenerator=()=>{
-  const {length,setLength,includeUppercase,includeLowercase,includeNumbers,includeSymbols,toggleUppercase,toggleLowercase,toggleNumbers,toggleSymbols,generatedPassword}=usePasswordStore()
+  const {length,setLength,includeUppercase,includeLowercase,includeNumbers,includeSymbols,toggleUppercase,toggleLowercase,toggleNumbers,toggleSymbols,generatedPassword,generatePassword}=usePasswordStore()
 
-  const handleGeneratePassword=()=>{};
+  const handleGeneratePassword=()=>{
+    generatePassword();
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-purple-400 to-blue-500">

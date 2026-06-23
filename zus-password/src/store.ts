@@ -38,7 +38,7 @@ const usePasswordStore=create<PasswordState>((set)=>({
     if(state.includeNumbers) chars+=numbers;
     if(state.includeSymbols) chars+=symbols;
     if(state.includeLowercase) chars+=lowercase;
-    if(state.includeUppercase) chars==uppercase;
+    if(state.includeUppercase) chars+=uppercase;
 
     if(!chars) return {generatedPassword:""}
 
