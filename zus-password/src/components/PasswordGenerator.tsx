@@ -3,6 +3,7 @@ import usePasswordStore from "../store";
 const PasswordGenerator=()=>{
   const {length,setLength,includeUppercase,includeLowercase,includeNumbers,includeSymbols,toggleUppercase,toggleLowercase,toggleNumbers,toggleSymbols,generatedPassword}=usePasswordStore()
 
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-purple-400 to-blue-500">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-lg">
@@ -28,7 +29,7 @@ const PasswordGenerator=()=>{
             <input type="checkbox" checked={includeLowercase} onChange={toggleLowercase}/>
             <label className="ml-2 text-sm">Include Lowercase</label>
           </div>
-          <button></button>
+          <button onClick={handleGeneratePassword} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"></button>
         </div>
         
       </div>
