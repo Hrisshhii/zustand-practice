@@ -32,7 +32,9 @@ const PasswordGenerator=()=>{
             <input type="checkbox" checked={includeLowercase} onChange={toggleLowercase}/>
             <label className="ml-2 text-sm">Include Lowercase</label>
           </div>
-          <button onClick={handleGeneratePassword} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+          <button onClick={handleGeneratePassword} 
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          >
             Generate Password
           </button>
           {generatedPassword && (
