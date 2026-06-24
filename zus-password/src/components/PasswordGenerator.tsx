@@ -10,7 +10,9 @@ const PasswordGenerator=()=>{
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-purple-400 to-blue-500">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-lg">
-        <h1 className="text-3xl font-bold">Password Generator</h1>
+        <h1 className="text-3xl font-bold">
+          Password Generator
+        </h1>
         <div className="flex flex-col gap-4">
           <label htmlFor="length" className="block text-sm font-medium text-gray-700">Password Length</label>
           <input type="number" id="length" value={length} onChange={e=>setLength(+e.target.value)} min={4} max={64}
@@ -45,7 +47,6 @@ const PasswordGenerator=()=>{
             </div>
           )}
         </div>
-        
       </div>
     </div>
   )
