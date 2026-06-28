@@ -2,7 +2,7 @@ import { useGetAllProductsQuery } from "../app/service/dummyData";
 
 const AllProducts = () => {
   const {data,isError,isLoading}=useGetAllProductsQuery("");
-
+  console.log(data)
   if(isError){
     return <h1>Error</h1>
   }
@@ -17,6 +17,7 @@ const AllProducts = () => {
         <>
           <h1 key={p.id}>{p.title}</h1>
           <p>{p.description}</p>
+          <img src={p.images}/>
         </>
       ))}
     </div>
