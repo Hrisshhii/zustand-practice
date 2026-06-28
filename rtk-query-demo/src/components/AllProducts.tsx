@@ -14,7 +14,10 @@ const AllProducts = () => {
   return (
     <div>
       {data?.products.map((p:any)=>(
-        <h1 key={p.id}>{p.title}</h1>
+        <>
+          <h1 key={p.id}>{p.title}</h1>
+          <p>{p.description}</p>
+        </>
       ))}
     </div>
   )
