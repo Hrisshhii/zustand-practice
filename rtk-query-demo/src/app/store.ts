@@ -1,5 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import { productApi } from './service/dummyData';
 
 export const store=configureStore({
-  reducer:{}
+  reducer:{
+    [productApi.reducerPath]: productApi.reducer
+  },
+  //for caching
+  middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(productApi.middleware),
 });
+
+setupListeners(store.dispatch);
