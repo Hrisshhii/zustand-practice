@@ -1,6 +1,6 @@
 import {useGetProductByIdQuery} from '../app/service/dummyData';
 
-const SpecificProduct = () => {
+const SpecificProduct=()=>{
   const {data,isLoading,isError}=useGetProductByIdQuery(2);
   console.log(data);
 
