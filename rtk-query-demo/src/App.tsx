@@ -1,12 +1,15 @@
 // import AllProducts from "./components/AllProducts"
+// import SpecificProduct from "./components/SpecificProduct"
 
-import SpecificProduct from "./components/SpecificProduct"
+import AddNewProduct from "./components/AddNewProduct"
 
 const App = () => {
   return (
     <div>
       {/* <AllProducts/> */}
-      <SpecificProduct/>
+      {/* <SpecificProduct/> */}
+      <AddNewProduct/>
+
     </div>
   )
 }
