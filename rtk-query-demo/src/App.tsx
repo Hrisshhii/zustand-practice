@@ -12,7 +12,7 @@ const App = () => {
       {/* <SpecificProduct/> */}
       {/* <AddNewProduct/> */}
       {/* <UpdateProduct productId={4}/> */}
-      <DeleteProduct/>
+      <DeleteProduct productId={4}/>
 
     </div>
   )
