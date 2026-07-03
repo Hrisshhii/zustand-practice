@@ -21,6 +21,7 @@ const DeleteProduct = ({productId}:any) => {
 
   return (
     <div>
+      <h1>{data?.title?`${data.title} successfully deleted`:""}</h1>
       <button onClick={handleDelete} disabled={isLoading}>Delete Product</button>
     </div>
   )
