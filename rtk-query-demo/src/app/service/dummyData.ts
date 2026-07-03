@@ -25,8 +25,14 @@ export const productApi=createApi({
         headers:{"Content-Type":"application/json"},
         body:updatedProduct,
       })
+    }),
+    deleteProduct:builder.mutation({
+      query:(id)=>({
+        url:`/products/${id}`,
+        method:"DELETE",
+      })
     })
   }),
 })
 
-export const {useGetAllProductsQuery,useGetProductByIdQuery,useAddNewProductMutation,useUpdateProductMutation}=productApi
+export const {useGetAllProductsQuery,useGetProductByIdQuery,useAddNewProductMutation,useUpdateProductMutation,useDeleteProductMutation}=productApi
