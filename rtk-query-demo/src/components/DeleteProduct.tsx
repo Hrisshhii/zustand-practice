@@ -1,6 +1,6 @@
 import {useDeleteProductMutation} from "../app/service/dummyData";
 
-const DeleteProduct = ({productId}:any) => {
+const DeleteProduct=({productId}:{productId:number})=>{
   const [deleteProduct,{data,isError,isLoading}]=useDeleteProductMutation();
 
   if(isError){
