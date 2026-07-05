@@ -1,6 +1,6 @@
 import { useUpdateProductMutation } from "../app/service/dummyData";
 
-const UpdateProduct = ({productId}:any) => {
+const UpdateProduct = ({productId}:{productId:string}) => {
   const [updateProduct,{data,isError,isLoading}]=useUpdateProductMutation();
 
   if(isError){
