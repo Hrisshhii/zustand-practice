@@ -1,7 +1,15 @@
+import type { ReactNode } from "react";
 
-const SplitScreen = () => {
+interface SplitScreenProps{
+  children:[ReactNode,ReactNode];
+  leftWeight:Number;
+  rightWeight:Number;
+
+};
+
+const SplitScreen = ({children,leftWeight,rightWeight}:SplitScreenProps) => {
   return (
-    <div>SplitScreen</div>
+    <></>
   )
 }
 

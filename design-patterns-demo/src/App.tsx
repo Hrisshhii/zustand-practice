@@ -1,7 +1,15 @@
+import Left from "./components/Left"
+import Right from "./components/Right"
+import SplitScreen from "./components/SplitScreen"
 
 const App = () => {
   return (
-    <div className="text-4xl text-blue-500 text-center">App</div>
+    <>
+      <SplitScreen leftWeight={50} rightWeight={50}>
+        <Left/>
+        <Right/>
+      </SplitScreen>
+    </>
   )
 }
 

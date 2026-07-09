@@ -1,7 +1,7 @@
 
 const Right = () => {
   return (
-    <div>Right</div>
+    <div className="bg-red-400">Right</div>
   )
 }
 
