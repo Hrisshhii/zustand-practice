@@ -5,7 +5,7 @@ import SplitScreen from "./components/SplitScreen"
 const App = () => {
   return (
     <>
-      <SplitScreen leftWeight={15} rightWeight={80}>
+      <SplitScreen leftWeight={10} rightWeight={90}>
         <Left/>
         <Right/>
       </SplitScreen>
