@@ -6,15 +6,19 @@ import SplitScreen from "./components/SplitScreen"
 
 const App = () => {
   return (
-    <div className="flex flex-col h-screen">
-      <Header/>
-      <SplitScreen LeftWeight={1} RightWeight={3}>
-        <Sidebar/>
-        <Content/>
-      </SplitScreen>
-      <Footer/>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+
+      <div className="flex-1">
+        <SplitScreen LeftWeight={1} RightWeight={3}>
+          <Sidebar />
+          <Content />
+        </SplitScreen>
+      </div>
+
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default App
