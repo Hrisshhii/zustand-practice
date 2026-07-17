@@ -1,7 +1,7 @@
 
 const Sidebar = () => {
   return (
-    <div className="bg-gray-200 p-4">
+    <div className="bg-white rounded-lg shadow-md p-5 h-full">
       <h2 className="text-lg font-bold mb-4">Navigation</h2>
       <ul>
         <li className="mb-2">
