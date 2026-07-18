@@ -1,27 +1,30 @@
 
-const Sidebar = () => {
+const Sidebar=()=>{
   return (
-    <div className="bg-white rounded-lg shadow-md p-5 h-full">
-      <h2 className="text-lg font-bold mb-4">Navigation</h2>
-      <ul>
-        <li className="mb-2">
-          <a href="#" className="text-blue-500 hover:text-blue-700">
+    <aside className="bg-white rounded-lg shadow-md h-full p-6">
+      <h2 className="text-lg font-bold mb-6">Navigation</h2>
+
+      <ul className="space-y-3">
+        <li>
+          <a href="#" className="block rounded-md px-3 py-2 hover:bg-teal-100">
             Home
           </a>
         </li>
-        <li className="mb-2">
-          <a href="#" className="text-blue-500 hover:text-blue-700">
+
+        <li>
+          <a href="#" className="block rounded-md px-3 py-2 hover:bg-teal-100">
             About
           </a>
         </li>
-        <li className="mb-2">
-          <a href="#" className="text-blue-500 hover:text-blue-700">
+
+        <li>
+          <a href="#" className="block rounded-md px-3 py-2 hover:bg-teal-100">
             Contact
           </a>
         </li>
       </ul>
-    </div>
-  )
-}
+    </aside>
+  );
+};
 
 export default Sidebar
