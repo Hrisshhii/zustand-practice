@@ -6,8 +6,12 @@ interface SplitScreenProps{
   RightWeight?: number
 };
 
-const SplitScreen = ({children,LeftWeight=1,RightWeight=1}: SplitScreenProps) => {
-  const [left,right] = children;
+const SplitScreen = ({
+  children,
+  LeftWeight = 1,
+  RightWeight = 1,
+}: SplitScreenProps) => {
+  const [left, right] = children;
 
   return (
     <section className="flex flex-1">
