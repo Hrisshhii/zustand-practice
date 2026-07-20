@@ -12,29 +12,10 @@ const Content = () => {
       </p>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-        <StatCard
-          title="Total Users"
-          value="1,234"
-          subtitle="+12% this month"
-        />
-
-        <StatCard
-          title="Revenue"
-          value="$12,345"
-          subtitle="+8% this month"
-        />
-
-        <StatCard
-          title="Orders"
-          value="589"
-          subtitle="43 pending"
-        />
-
-        <StatCard
-          title="Products"
-          value="182"
-          subtitle="12 low stock"
-        />
+        <StatCard title="Total Users" value="1,234" subtitle="+12% this month"/>
+        <StatCard title="Revenue" value="$12,345" subtitle="+8% this month"/>
+        <StatCard title="Orders" value="589" subtitle="43 pending"/>
+        <StatCard title="Products" value="182" subtitle="12 low stock" />
       </div>
     </div>
   );
